@@ -40,7 +40,9 @@ export const InputProvider = ({ children }) => {
         setInputTab(newInputs);
     }
     const handleSubmit = () =>{
-        setListData(...listData,inputTab)
+        // setListData(...listData,inputTab)
+        const uniqueEntries = inputTab.filter(item => !listData.includes(item));
+        setListData((prevListData) => [...prevListData, ...uniqueEntries]);
         console.log('listData',listData)
         if(listData){
 
@@ -54,6 +56,7 @@ export const InputProvider = ({ children }) => {
     const handleDeleteItem = (index) => {
         const updatedListData = listData.filter((_, i) => i !== index);
         setListData(updatedListData);
+        setInputTab(updatedListData);
     };
 
     return (
