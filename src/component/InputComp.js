@@ -14,9 +14,10 @@ function InputComp() {
     return (
         <>
             <div className='container'>
-                <h2 className='text-center mt-5 mb-5'>Add Entries here</h2>
+                <h2 className='text-center mt-5 mb-5'>Add Entries Here</h2>
                 {inputTab.map((value, index) => (
-                    <div className='row' key={index}>
+                    <div className='row text-center mb-3' key={index}>
+                        <div className='col-lg-2'></div>
                         <div class=" col-lg-6 mb-3">
                             <input
                                 type="text"
@@ -26,14 +27,14 @@ function InputComp() {
                                 placeholder="enter here...."
                                 onChange={(e) => handleInputChange(index, e.target.value)} />
                         </div>
-                        <div className='col-lg-6'>
+                        <div className='col-lg-3'>
                             {inputTab.length > 1 && (
                                 <button className="btn btn-primary" onClick={() => handleRemoveInput(index)}>Remove</button>
                             )}
                         </div>
                     </div>
                 ))}
-                <div className='row'>
+                <div className='row text-center'>
                     <div className='col-lg-4'>
 
                         <button className='btn btn-secondary' onClick={handleAddInput}>Add</button>
