@@ -23,7 +23,6 @@ function InputComp() {
                                 type="text"
                                 class="form-control"
                                 value={value}
-                                id="exampleFormControlInput1"
                                 placeholder="enter here...."
                                 onChange={(e) => handleInputChange(index, e.target.value)} />
                         </div>
@@ -36,20 +35,15 @@ function InputComp() {
                 ))}
                 <div className='row text-center'>
                     <div className='col-lg-4'>
-
                         <button className='btn btn-secondary' onClick={handleAddInput}>ADD</button>
-
                     </div>
-
                     <div className='col-lg-4'>
                         <button className='btn btn-secondary' onClick={handleNavigation}>GO TO LIST</button>
-
                     </div>
                     <div className='col-lg-4'>
                         <button className='btn btn-secondary' onClick={handleSubmit}>SUBMIT</button>
                     </div>
                 </div>
-
             </div>
         </>
     )

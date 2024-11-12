@@ -51,9 +51,13 @@ export const InputProvider = ({ children }) => {
             });
         }
     }
+    const handleDeleteItem = (index) => {
+        const updatedListData = listData.filter((_, i) => i !== index);
+        setListData(updatedListData);
+    };
 
     return (
-        <InputContext.Provider value={{ inputTab,setInputTab, handleAddInput,listData, handleRemoveInput,handleInputChange,handleSubmit }}>
+        <InputContext.Provider value={{ inputTab,setInputTab, handleAddInput,listData,handleDeleteItem, handleRemoveInput,handleInputChange,handleSubmit }}>
             {children}
         </InputContext.Provider>
     );

@@ -36,9 +36,7 @@ function App() {
       <Routes>
         <Route path='' element={<InputComp />} />
         <Route path='/list' element={<ListData />} />
-
       </Routes>
-     
     </>
   );
 }
